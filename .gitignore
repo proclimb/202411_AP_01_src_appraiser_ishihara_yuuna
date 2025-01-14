@@ -1,0 +1,8 @@
+docker/db/mysql_data/
+docker/logs/
+SRC/pdfs/*.pdf
+SRC/libDBInit.php
+.buildpath
+.project
+.settings/
+/SRC/sync.ffs_db

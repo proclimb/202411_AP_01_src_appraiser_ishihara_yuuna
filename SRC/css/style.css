@@ -1,0 +1,120 @@
+body,table,form{
+	font-size:12px;
+}
+h1{
+height:47px;
+	font-size:16px;
+	line-height:24px;
+	margin:5px 0 15px 0;
+	padding:8px 0 0 12px;
+	background-image:url(../images/ttlh1.png);
+}
+img{
+	border:0;
+}
+hr{
+	color:#336699;
+	height:1px;
+	margin:10px 0 10px 0;
+}
+.search table th{
+	width:100px;
+}
+.list table{
+	background:#666666;
+	margin:10px 0 10px 0;
+}
+.list table tr{
+	background:#ffffff;
+}
+div,p,form{
+	margin:0;
+	padding:0;
+}
+.red{
+	color:#ff0000;
+}
+.f16{
+	font-size:16px;
+}
+.space10{
+	margin:0 0 10px 0;
+}
+.space20{
+	margin:0 0 20px 0;
+}
+.center{
+	text-align:center;
+}
+
+
+#head{
+width:100%;
+margin:0 0 20px 0;
+}
+
+#left{
+float:left;
+}
+
+#right{
+float:right;
+}
+
+
+#navi1{float:left;width:70px;}
+#navi2{float:left;width:70px;}
+#navi3{float:left;width:70px;}
+#navi4{float:left;width:70px;}
+#navi5{float:left;width:70px;}
+#navi6{float:left;width:70px;}
+#navi7{float:left;width:97px;}
+#navi8{float:left;width:70px;}
+#navi9{float:left;width:70px;}
+#navi10{float:left;width:70px;}
+
+
+.list_head{
+background-image:url("../images/tablebg.png");
+height:30px;
+color:#FFFFFF;
+}
+
+.list_head a{color:#FFFFFF;text-decoration:none;}
+
+.list_td0{
+background-color:#FFFFFF;
+}
+
+.list_td1{
+background-color:#EEEEEE;
+}
+
+
+
+.login_ttl  {
+margin:0 auto;
+width:310px;
+}
+.login_table{margin:0 auto;width:340px;background-image:url(../images/login_bg.png);height:140px;padding:80px 0 0 80px;}
+.login_btn  {margin:0 auto;width:185px;}
+
+.clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  min-height: 1px;
+}
+
+* html .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
