@@ -343,6 +343,7 @@ function subStockEditView($param)
 				<th>仕入経緯</th>
 				<td>
 					<?php
+					// stockNoの有無で新規登録時のデフォルト値を設定するとともに、DBに登録されている値とfor文の変数$iがチェックを付ける値で一致した場合にチェックを付ける処理を追加する
 					if (!$param["stockNo"]) {
 						$param["how"] = 1;
 					}
