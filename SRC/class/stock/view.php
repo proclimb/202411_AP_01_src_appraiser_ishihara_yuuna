@@ -295,9 +295,17 @@ function subStockEditView($param)
 				<th>距離</th>
 				<td>
 					<?php
+					// stockNoの有無で新規登録時のデフォルト値を設定するとともに、DBに登録されている値とfor文の変数$iがチェックを付ける値で一致した場合にチェックを付ける処理を追加する
+					if (!$param["stockNo"]) {
+						$param["distance"] = 1;
+					}
 					for ($i = 0; $i < 4; $i++) {
+						$check = '';
+						if (($param["distance"] - 1) == $i) {
+							$check = 'checked = "checked"';
+						}
 					?>
-						<input type="radio" name="distance" value="<?php print $i + 1; ?>" <?php if ($param["distance"] == $i) print ' checked="checked"'; ?> /> <?php print fnDistanceName($i); ?>
+						<input type="radio" name="distance" value="<?php print $i + 1; ?>" <?php print $check; ?> /><?php print fnDistanceName($i); ?>
 					<?php
 					}
 					?>
