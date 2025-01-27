@@ -32,7 +32,7 @@ function fnStockEditCheck() {
 
 	tmp = form.area.value;
 	if (tmp.length > 0 && !tmp.match(/^([1-9][0-9]{0,2}|0)(\.[0-9][0-9]|\.[0-9])?$/)) {
-		alert('0以上の数字 && 面積は3桁以内（小数点以下2桁以内）の半角数字で入力してください');
+		alert('面積は3桁以内（小数点以下2桁以内）の半角数字で入力してください');
 		return;
 	}
 
