@@ -12,7 +12,7 @@ function fnTradeEditCheck() {
 		return;
 	}
 
-	tmp = form.nameYomi.value;
+	tmp = form.nameFuri.value;
 	if (tmp.length > 100) {
 		alert('業者名（よみ）は100文字以内で入力してください');
 		return;
