@@ -260,9 +260,9 @@ function subArticleEdit()
 		</table>
 
 		<a href="javascript:fnArticleEditCheck();"><img src="./images/<?php print $btnImage ?>" /></a>
-		<a href="javascript:form.act.value='fManager';form.submit();"><img src="./images/btn_return.png" /></a>
+		<a href="javascript:form.act.value='articleSearch';form.submit();"><img src="./images/btn_return.png" /></a>
 
-		<?php if ($articleNo) {  // 物件番号（$articleNo）の値が存在する場合にのみ削除ボタンが表示される 
+		<?php if ($articleNo) {  // 物件番号（$articleNo）の値が存在する場合にのみ削除ボタンが表示される
 		?>
 			&nbsp;&nbsp;<a href="javascript:fnArticleDeleteCheck(<?php print $articleNo ?>);"><img src="./images/btn_del.png" /></a>
 		<?php } ?>
