@@ -144,7 +144,7 @@ function subArticle()
 
 
 //
-//物件管理編集画面
+//物件管理編集画面($articleNo の値の有無で処理が切り替わり異なる動作をする＝編集画面／新規登録画面)
 //
 function subArticleEdit()
 {
@@ -188,7 +188,7 @@ function subArticleEdit()
 		$btnImage = 'btn_enter.png';
 	}
 
-	subMenu2();
+	subMenu();
 ?>
 	<script type="text/javascript" src="./js/article.js"></script>
 
