@@ -54,7 +54,7 @@ function fnSqlArticleEdit($articleNo)
 {
 	$sql  = "SELECT ARTICLE, ROOM, KEYPLACE, ADDRESS, ARTICLENOTE, KEYBOX, DRAWING, SELLCHARGE, DEL";
 	$sql .= " FROM TBLARTICLE";
-	$sql .= " WHERE ARTICLENO = 1";
+	$sql .= " WHERE ARTICLENO =  $articleNo "; //関数の引数として渡された物件番号に基づくデータを取得して(53行目)、更新画面へ遷移する
 
 	return ($sql);
 }
