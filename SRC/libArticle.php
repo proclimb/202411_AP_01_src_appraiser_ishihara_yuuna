@@ -158,6 +158,7 @@ function subArticleEdit()
 	$sDueDTFrom   = $_REQUEST['sDueDTFrom'];
 	$sDueDTTo     = $_REQUEST['sDueDTTo'];
 	$sSellCharge  = $_REQUEST['sSellCharge'];
+	$sDrawing     = $_REQUEST['sDrawing'];
 
 	$orderBy = $_REQUEST['orderBy'];
 	$orderTo = $_REQUEST['orderTo'];
@@ -208,6 +209,7 @@ function subArticleEdit()
 		<input type="hidden" name="orderTo" value="<?php print $orderTo ?>" />
 		<input type="hidden" name="sPage" value="<?php print $sPage ?>" />
 		<input type="hidden" name="articleNo" value="<?php print $articleNo ?>" />
+		<input type="hidden" name="sDrawing" value="<?php print $sDrawing ?>" />
 
 		<table border="0" cellpadding="5" cellspacing="1">
 			<tr>
