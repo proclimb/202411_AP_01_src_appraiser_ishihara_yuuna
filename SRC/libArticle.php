@@ -215,14 +215,14 @@ function subArticleEdit()
 			<tr>
 				<th>除外</th>
 				<?php
-				// 新規登録画面・更新画面ともにラジオボタンが表示される（$articlenoの値の有無に限らず表示）　if ($articleNo) { 
+				// 新規登録画面・更新画面ともにラジオボタンが表示される（$articleNoの値の有無に関わらず表示）　if ($articleNo) {
 				?>
 				<td>
 					<input type="radio" name="del" value="1" checked="checked" /> 非除外
 					<input type="radio" name="del" value="0" <?php if ($del == '0') print ' checked="checked"' ?> /> 除外
 				</td>
 				<?php
-				// } 
+				// }
 				?>
 			</tr>
 			<tr>
