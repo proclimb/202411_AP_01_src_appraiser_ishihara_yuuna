@@ -110,9 +110,9 @@ function fnSqlArticleInsert($articleNo, $article, $room, $keyPlace, $address, $a
 function fnSqlArticleDelete($articleNo)
 {
 	$sql  = "UPDATE TBLARTICLE";
-	$sql .= " SET DEL = 0";
-	$sql .= ",UPDT = CURRENT_TIMESTAMP";
+	$sql .= " SET DEL = -1";    // 論理削除=[-1 ]
+	$sql .= ",UPDT = CURRENT_TIMESTAMP";    // 更新日時をタイムスタンプに設定
 	$sql .= " WHERE ARTICLENO = '$articleNo'";
 
-	return ($sql);
+	return ($sql);    // SQL文を返す
 }
