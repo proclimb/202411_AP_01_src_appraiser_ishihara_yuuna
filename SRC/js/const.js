@@ -1,9 +1,10 @@
 //
 //工事管理チェック
 //
+
 function fnConstEditCheck() {
 	tmp = form.area.value;
-	if (tmp.length > 6 || tmp.match(/[^0-9]+/)) {
+	if (tmp.length > 0 && !tmp.match(/^([0-9]{1,3})(\.[0-9]{1,2})?$/)) { //0以上の入力があり && 整数部分1〜3桁かつ小数点以下0〜2桁の数字ではない = アラート出す
 		alert('面積は3桁以内（小数点以下2桁以内）の半角数字で入力してください');
 		return;
 	}
