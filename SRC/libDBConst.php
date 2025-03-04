@@ -175,7 +175,6 @@ function fnSqlConstUpdate(
 	$sql .= ",CONSTFLG3 = '$constFlg3'";
 	$sql .= ",CONSTFLG4 = '$constFlg4'";
 	$sql .= ",UPDT = CURRENT_TIMESTAMP";   //UPDATE（更新日時）を更新
-	$sql .= ",UPDT = CURRENT_TIMESTAMP";
 	$sql .= ",LINEOPENCONTACTDT = '$lineOpenContactDT'";
 	$sql .= ",LINECLOSECONTACTDT = '$lineCloseContactDT'";
 	$sql .= ",LINECONTACTNOTE = '$lineContactnote'";
