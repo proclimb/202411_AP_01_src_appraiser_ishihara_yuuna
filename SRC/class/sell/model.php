@@ -137,10 +137,10 @@ function fnSqlSellInsert($param)
 //
 function fnSqlSellDelete($sellNo)
 {
-    $sql = "UPDATE TBLSELL";
-    $sql .= " SET DEL = 1";
-    $sql .= ",UPDT = CURRENT_TIMESTAMP";
-    $sql .= " WHERE SELLNO = '$sellNo'";
+    $sql = "UPDATE TBLSELL"; // TBLSELLテーブルのデータを更新
+    $sql .= " SET DEL = -1"; // DELカラムを-1に設定（論理削除）
+    $sql .= ",UPDT = CURRENT_TIMESTAMP"; // UPDTカラムを現在の日時に設定
+    $sql .= " WHERE SELLNO = '$sellNo'"; // $sellNoと一致するレコードに対して更新を実行
 
     return $sql;
 }
