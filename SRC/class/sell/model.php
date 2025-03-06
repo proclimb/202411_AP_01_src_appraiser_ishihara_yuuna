@@ -98,8 +98,8 @@ function fnSqlSellEdit($sellNo)
 //
 function fnSqlSellUpdate($param)
 {
-    $sql = "UPDATE TBLSELL";
-    $sql .= " SET SEARCHDT = '" . $param["searchDT"] . "'";
+    $sql = "UPDATE TBLSELL"; // 更新するテーブル(TBLSELL)を指定
+    $sql .= " SET SEARCHDT = '" . $param["searchDT"] . "'"; // SERCHDTカラム更新（以下、カラムごとにSQL文を記載）
     $sql .= ",ARTICLE = '" . $param["article"] . "'";
     $sql .= ",ADDRESS = '" . $param["address"] . "'";
     $sql .= ",STATION = '" . $param["station"] . "'";
@@ -111,6 +111,7 @@ function fnSqlSellUpdate($param)
     $sql .= ",PRICE = '" . $param["price"] . "'";
     $sql .= ",NOTE = '" . $param["note"] . "'";
     $sql .= ",UPDT = CURRENT_TIMESTAMP";
+    $sql .= " WHERE SELLNO = " . $param["sellNo"];  // どのレコード(SELLNO)を更新するかを指定
 
     return $sql;
 }
