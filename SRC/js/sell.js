@@ -51,7 +51,7 @@ function fnSellEditCheck() {
 		alert('築年を入力してください');
 		return;
 	}
-	if (tmp.length > 4 || tmp.match(/[^0-9]+/)) { // 4以上の数字　OR　数字(0~9)以外の文字が含まれている場合　＝　アラートを出す
+	if (tmp.length > 4 || tmp.match(/[^0-9]+/)) { // 4以上の数字　OR　数字(0-9)以外の文字が含まれている場合　＝　アラートを出す
 		alert('築年は4桁以内の半角数字で入力してください');
 		return;
 	}
@@ -71,7 +71,7 @@ function fnSellEditCheck() {
 		alert('専有面積を入力してください');
 		return;
 	}
-	if (tmp.length > 6 || tmp.match(/[^0-9\.]+/)) {
+	if (tmp.length > 0 && !tmp.match(/^([0-9]{1,3})(\.[0-9]{1,2})?$/)) { // 0以上の入力がある　AND　0-9の整数1～3桁と小数点以下1～2桁(小数点以下の入力は任意)ではない場合　＝　アラートを出す
 		alert('専有面積は3桁以内（小数点以下2桁以内）の半角数字で入力してください');
 		return;
 	}
