@@ -64,9 +64,9 @@ function fnGuideMove(muki, articleNo) {
 		var obj = $("#s" + articleNo);
 
 		// 名称の取得
-		var articleName = $(obj.children()[0]).text();
-		var articleRoom = $(obj.children()[1]).text();
-		var articleKey = $(obj.children()[2]).text();
+		var articleName = $(obj.children()[0]).text(); // 物件名は テキストで表示
+		var articleRoom = $(obj.children()[1]).text(); // 部屋は テキストで表示
+		var articleKey = $(obj.children()[2]).html();  // 鍵場所は html(リンク)で表示
 
 		// 登録リストに保存(右側に移動)
 		tags = "<tr id=\"r" + articleNo + "\">";
