@@ -121,10 +121,10 @@ function fnGuideMove(muki, articleNo) {
 	}
 
 	// 色の再設定
-	$("#search tr").filter(":odd").find("td").attr("class", "list_td1");
-	$("#search tr").filter(":even").find("td").attr("class", "list_td1");
-	$("#regist tr").filter("odd").find(".td").attr("class", "list_td0");
-	$("#regist tr").filter("even").find(".td").attr("class", "list_td1");
+	$("#search tr").filter(":odd").find("td").attr("class", "list_td0");  // .filter(":odd"): 奇数番目の行（1, 3, 5番目の行）をフィルタリング
+	$("#search tr").filter(":even").find("td").attr("class", "list_td1"); // .filter(":even"): 偶数番目の行（2, 4, 6番目の行）をフィルタリング
+	$("#regist tr").filter(":odd").find("td").attr("class", "list_td0");
+	$("#regist tr").filter(":even").find("td").attr("class", "list_td1");
 }
 
 
