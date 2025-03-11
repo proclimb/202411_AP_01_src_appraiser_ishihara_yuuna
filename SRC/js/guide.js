@@ -17,7 +17,7 @@ function fnGuideEditCheck() {
 		if (isLength(100, msg + "営業店", getEditObject(i, "branch"))) { return; }
 		if (isLength(100, msg + "TEL", getEditObject(i, "tel"))) { return; }
 		if (isLength(100, msg + "FAX", getEditObject(i, "fax"))) { return; }
-		if (isLength(10, msg + "結果", getEditObject(i, "result"))) { return; }
+		if (isLength(1000, msg + "結果", getEditObject(i, "result"))) { return; }
 		if (!fnYMDCheck(msg + "受付日には正しい日付", getEditObject(i, "acceptDT"))) { return; }
 		if (isLength(100, msg + "受付", getEditObject(i, "accept"))) { return; }
 	}
