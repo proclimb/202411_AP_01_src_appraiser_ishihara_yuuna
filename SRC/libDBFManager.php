@@ -94,7 +94,7 @@ function fnSqlFManagerInsert($fMNo, $name, $room, $note, $del)
 function fnSqlFManagerDelete($fMNo)
 {
 	$sql  = "UPDATE TBLFM";
-	$sql .= " SET DEL = 0";
+	$sql .= " SET DEL = -1"; // DELカラムの値を -1(論理削除) に設定
 	$sql .= ",UPDT = CURRENT_TIMESTAMP";
 	$sql .= " WHERE FMNO = '$fMNo'";
 
