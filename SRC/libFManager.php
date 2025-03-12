@@ -198,7 +198,7 @@ function subFManagerEdit()
 					</td>
 				</tr>
 				<tr>
-					<th>物件名</th>
+					<th>物件名<span class="red">（必須）</span> </th>
 					<td><input type="text" name="name" value="<?php print $name; ?>" /></td>
 				</tr>
 				<tr>
