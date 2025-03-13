@@ -175,24 +175,25 @@ function subTitlePage1()
 //
 function subFTitleDelete()
 {
-    $conn = fnDbConnect();
+    $conn = fnDbConnect(); // fnDbConnect という関数を呼び出して、データベースへの接続を行う。接続の結果として得られた $conn 変数は、下記のSQLクエリの実行に使用する
 
-    $DocNo = $_REQUEST['DocNo'];
+    $DocNo = $_REQUEST['DocNo']; // DocNo（削除対象のタイトル識別番号）を取得して、$DocNo 変数に格納
 
-    if ($_REQUEST['seqNo'] == 0) {
-        $sql = fnSqlFTitleRepetition($_REQUEST['classNo']);
-        $res = mysqli_query($conn, $sql);
-        while ($row = mysqli_fetch_array($res)) {
-            $sql = fnSqlFTitleDelete($row['DOCNO']);
+    if ($_REQUEST['seqNo'] == 0) { // seqNo が 0 の場合、
+        $sql = fnSqlFTitleRepetition($_REQUEST['classNo']); // 指定された classNo（クラス番号）に関連する重複したタイトルのSQLクエリを生成
+        $res = mysqli_query($conn, $sql); // クエリを実行し、結果を $res に格納
+        while ($row = mysqli_fetch_array($res)) { // クエリ結果を1行ずつ取り出す
+            $sql = fnSqlFTitleDelete($row['DOCNO']); // DOCNO（タイトル識別番号）を使って、fnSqlFTitleDelete 関数を呼び出して削除SQLを実行
             $result = mysqli_query($conn, $sql);
         }
-    } else {
-        $sql = fnSqlFTitleDelete($DocNo);
-        $res = mysqli_query($conn, $sql);
-    }
+        $_REQUEST['act'] = 'fTitleSearch'; // （act パラメータを 'fTitleSearch' に設定）削除後に項目名管理画面へ遷移する
+        subFTitle(); // subFTitle() 関数を呼び出して、タイトル一覧や検索画面を表示する処理を行う
 
-    $_REQUEST['act'] = 'fTitleSearch';
-    subFTitle();
+    } else { // seqNo が 0 でない場合、
+        $sql = fnSqlFTitleDelete($DocNo); // fnSqlFTitleDelete($DocNo) で削除対象のタイトルを特定するSQLクエリを生成し、実行
+        $res = mysqli_query($conn, $sql);
+        subTitlePage1(); // 削除後のページ表示（項目名管理画面）を行う
+    }
 }
 
 //
