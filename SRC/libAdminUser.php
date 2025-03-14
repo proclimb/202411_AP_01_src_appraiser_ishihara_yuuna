@@ -40,7 +40,7 @@ function subAdminUser()
 					<tr>
 						<td class="list_td<?php print $i; ?>"><a href="javascript:form.act.value='adminUserEdit';form.userNo.value=<?php print $userNo; ?>;form.submit();"><?php print $name; ?></a></td>
 						<td class="list_td<?php print $i; ?>"><?php print $id; ?></td>
-						<td class="list_td<?php print $i; ?>"><?php print $password; ?></td>
+						<td class="list_td<?php print $i; ?>"></td>
 						<td class="list_td<?php print $i; ?>"><?php print fnAuthorityName($authority); ?></td>
 						<td class="list_td<?php print $i; ?>">
 							<a href="javascript:fnAdminUserDeleteCheck(<?php print $userNo; ?>,'<?php print $name; ?>');">削除</a>
