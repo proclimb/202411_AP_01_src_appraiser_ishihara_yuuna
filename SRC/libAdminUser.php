@@ -4,10 +4,14 @@
 //
 function subAdminUser()
 {
-	$conn = fnDbConnect();
+	$conn = fnDbConnect(); // データベース接続関数を呼び出し、$conn 変数に接続情報を格納
 
-	subMenu();
+	subMenu(); // メニュー画面を表示する関数を呼び出し
 ?>
+
+	<!-- 外部JavaScriptファイルadminUser.jsを呼び出している -->
+	<script type="text/javascript" src="./js/adminUser.js"></script>
+
 	<h1>ユーザー情報画面</h1>
 
 	<form name="form" id="form" action="index.php" method="post">
