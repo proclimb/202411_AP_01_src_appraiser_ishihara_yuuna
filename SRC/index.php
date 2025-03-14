@@ -40,7 +40,7 @@ require('class/title/control.php');
 // 一覧表示件数
 define("PAGE_MAX", 100);
 
-// パスワードハッシュ化、複合化(ユーザー情報　更新/登録時)
+// パスワードハッシュ化、複合化(ユーザー情報のパスワード　更新/登録時)
 define("PASSWORD_DEFAULT", "2y");
 
 // ログインチェック
