@@ -6,7 +6,7 @@
 function fnSqlLogin($id) // $id(ユーザーのログインID)を使ってデータベース内のユーザーを検索し、ログイン認証を行うためのSQLクエリを作成
 {
     $id = addslashes($id); // addslashes($id) は、ユーザーIDに含まれる特殊文字（例: ' や "）をエスケープする。これにより、SQLインジェクション攻撃を防ぐためにSQLクエリ内で特殊文字が適切に処理される
-    $sql = "SELECT USERNO,AUTHORITY FROM TBLUSER"; // TBLUSER テーブルから、USERNOと AUTHORITYを取得するSQLクエリ
+    $sql = "SELECT USERNO,AUTHORITY,PASSWORD FROM TBLUSER"; // TBLUSER テーブルから、USERNOと AUTHORITYを取得するSQLクエリ
     $sql .= " WHERE DEL = 1"; // 削除されていないユーザー（DEL=1）だけを対象にする条件
     $sql .= " AND ID = '$id'"; // ユーザーIDが $id の値と一致するユーザーを選択する条件
 
