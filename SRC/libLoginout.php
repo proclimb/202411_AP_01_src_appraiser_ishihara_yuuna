@@ -36,7 +36,7 @@ function subLogin()
 }
 
 //
-//ログイン確認
+//ログイン確認（ハッシュ化ver） コメントアウト中
 //
 function subLoginCheck()
 {
@@ -45,7 +45,7 @@ function subLoginCheck()
 
 	$conn = fnDbConnect(); // データベース接続を確立
 
-	$sql = fnSqlLogin($id); // ユーザーIDに基づいてSQLクエリを作成（ログイン情報を取得）
+	$sql = fnSqlLogin($id, $pw); // ユーザーIDに基づいてSQLクエリを作成（ログイン情報を取得）
 	$res = mysqli_query($conn, $sql); // SQLクエリを実行して結果を取得
 	$row = mysqli_fetch_array($res); // 結果から1行分のデータを取得（ユーザー情報）
 
@@ -57,4 +57,29 @@ function subLoginCheck()
 		$_REQUEST['act']    = 'reLogin'; // ログイン失敗時、actを'reLogin'に設定して再度ログイン画面を表示
 	}
 }
+
+//
+//ログイン確認
+//
+// function subLoginCheck()
+// {
+// $id = addslashes($_REQUEST['id']);
+// $pw = addslashes($_REQUEST['pw']);
+
+// $conn = fnDbConnect();
+
+// $sql = fnSqlLogin($id, $pw);
+// $res = mysqli_query($conn, $sql);
+// $row = mysqli_fetch_array($res);
+
+// if ($row[0]) {
+// $_COOKIE['cUserNo']   = $row[0];
+// $_COOKIE['authority'] = $row[1];
+// $_REQUEST['act']      = 'menu';
+// } else {
+// $_REQUEST['act']    = 'reLogin';
+// }
+// }
+
+
 ?>
