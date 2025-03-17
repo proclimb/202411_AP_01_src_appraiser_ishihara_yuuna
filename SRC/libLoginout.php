@@ -36,7 +36,7 @@ function subLogin()
 }
 
 //
-//ログイン確認（ハッシュ化ver） コメントアウト中
+// ★　ログイン確認（ハッシュ化ver）
 //
 function subLoginCheck()
 {
@@ -59,7 +59,7 @@ function subLoginCheck()
 }
 
 //
-//ログイン確認
+// ★　ログイン確認
 //
 // function subLoginCheck()
 // {

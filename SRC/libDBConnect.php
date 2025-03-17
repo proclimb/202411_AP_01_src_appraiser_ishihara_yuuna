@@ -1,31 +1,31 @@
 <?php
 
 //
-// ログイン（ハッシュ化ver）　コメントアウト中
+// ★　ログイン（ハッシュ化ver）
 //
-// ★★★function fnSqlLogin($id) // $id(ユーザーのログインID)を使ってデータベース内のユーザーを検索し、ログイン認証を行うためのSQLクエリを作成
-// {
-// $id = addslashes($id); // addslashes($id) は、ユーザーIDに含まれる特殊文字（例: ' や "）をエスケープする。これにより、SQLインジェクション攻撃を防ぐためにSQLクエリ内で特殊文字が適切に処理される
-// $sql = "SELECT USERNO,AUTHORITY FROM TBLUSER"; // TBLUSER テーブルから、USERNOと AUTHORITYを取得するSQLクエリ
-// $sql .= " WHERE DEL = 1"; // 削除されていないユーザー（DEL=1）だけを対象にする条件
-// $sql .= " AND ID = '$id'"; // ユーザーIDが $id の値と一致するユーザーを選択する条件
-
-// return ($sql);
-// }★★★
-
-//
-// ログイン
-//
-function fnSqlLogin($id, $pw)
+function fnSqlLogin($id) // $id(ユーザーのログインID)を使ってデータベース内のユーザーを検索し、ログイン認証を行うためのSQLクエリを作成
 {
-    $id = addslashes($id);
-    $sql = "SELECT USERNO,PASSWORD,AUTHORITY FROM TBLUSER";
-    $sql .= " WHERE DEL = 1";
-    $sql .= " AND ID = '$id'";
-    $sql .= " AND PASSWORD = '$pw'";
+    $id = addslashes($id); // addslashes($id) は、ユーザーIDに含まれる特殊文字（例: ' や "）をエスケープする。これにより、SQLインジェクション攻撃を防ぐためにSQLクエリ内で特殊文字が適切に処理される
+    $sql = "SELECT USERNO,AUTHORITY FROM TBLUSER"; // TBLUSER テーブルから、USERNOと AUTHORITYを取得するSQLクエリ
+    $sql .= " WHERE DEL = 1"; // 削除されていないユーザー（DEL=1）だけを対象にする条件
+    $sql .= " AND ID = '$id'"; // ユーザーIDが $id の値と一致するユーザーを選択する条件
 
     return ($sql);
 }
+
+//
+// ★　ログイン
+//
+// function fnSqlLogin($id, $pw)
+// {
+// $id = addslashes($id);
+// $sql = "SELECT USERNO,AUTHORITY FROM TBLUSER";
+// $sql .= " WHERE DEL = 1";
+// $sql .= " AND ID = '$id'";
+// $sql .= " AND PASSWORD = '$pw'";
+
+// return ($sql);
+// }
 
 //
 // ユーザー情報リスト
@@ -72,7 +72,7 @@ function fnSqlAdminUserUpdate($userNo, $name, $id, $password, $authority)
 }
 
 //
-// ユーザー情報登録（ハッシュ化ver）　コメントアウト中
+// ★　ユーザー情報登録（ハッシュ化ver）
 //
 function fnSqlAdminUserInsert($userNo, $name, $id, $password, $authority)
 {
@@ -87,7 +87,7 @@ function fnSqlAdminUserInsert($userNo, $name, $id, $password, $authority)
 
 
 //
-// ユーザー情報登録
+// ★　ユーザー情報登録
 //
 // function fnSqlAdminUserInsert($userNo, $name, $id, $password, $authority)
 // {
